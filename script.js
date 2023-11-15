@@ -54,13 +54,13 @@
         myNodelist[i].appendChild(deleteButton);
       }
 
-      // *** 6 *** Reuseable Function for deleting each list
+// *** 6 *** Reuseable Function for deleting each list
       function addFunctionToDeleteIcon() {
         for (i = 0; i < close.length; i++) {
           close[i].onclick = function () {
-            var div = this.parentElement;
-            div.style.display = "none";
-            return div;
+              var div = this.parentElement;
+              div.style.display = "none";
+              return div;
           };
         }
       }
@@ -80,13 +80,13 @@
       list.addEventListener(
         "click",
         function (ev) {
+          console.log("check list :",ev)
           if (ev.target.tagName === "LI") {
-            ev.target.classList.toggle("checked");
+            ev.target.classList.toggle("checked"); 
           }
-        },
+        }, 
         false
       );
-
       // **** 1 **** Create a new list item when clicking on the "Add" button
       /*
         <input type="text" id="myInput" placeholder="Title..." />
